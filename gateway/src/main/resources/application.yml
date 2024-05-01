@@ -1,0 +1,30 @@
+server:
+  port: 8000
+
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: member-service
+            uri: lb://MEMBER-SERVICE
+            predicates:
+              - Path=/api/{version}/members/**
+
+          - id: book-service
+            uri: lb://BOOK-SERVICE
+            predicates:
+            - Path=/api/{version}/books/**
+
+eureka:
+  instance:
+    instance-id: gateway-service-instance
+
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
