@@ -15,4 +15,3 @@
     * Kafka ?
     * Axon ?
 * API Composition, CQRS
-  * 
