@@ -9,7 +9,9 @@
 * MicroService To MicroService
   * [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign)
 * Tracing
-  * [Spring Cloud Sleuth (Zipkin)](https://spring.io/projects/spring-cloud-sleuth) (예정)
+  * [Micrometer](https://micrometer.io/) (예정)
+  * Spring Boot 3.1까지만 [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth) 지원, [Micrometer](https://micrometer.io/)로 이전함
+    * [관련자료](https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/)
 * Transaction Management (예정)
   * Saga Pattern ?
     * Kafka ?
@@ -19,6 +21,12 @@
 
 
 ### Description
+* JDK 21
+* Spring Boot 3.2.5
+* Kotlin 1.9
+
+---
+
 * Eureka Server (Port : `8761`)
   * Spring Eureka Dashboard : http://localhost:8761
     <details>
