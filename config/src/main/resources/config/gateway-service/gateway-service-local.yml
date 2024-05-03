@@ -38,3 +38,8 @@ management:
   endpoint:
     refresh:
       enabled: true
+
+logging:
+  level:
+    org.springframework.cloud:
+      gateway: TRACE

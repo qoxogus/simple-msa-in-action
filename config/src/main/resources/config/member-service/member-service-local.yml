@@ -23,3 +23,8 @@ management:
   endpoint:
     refresh:
       enabled: true
+
+logging:
+  level:
+    com.service.member:
+      client: DEBUG
