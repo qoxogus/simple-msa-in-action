@@ -7,7 +7,7 @@
 * Config Server
   * [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/)
 * MicroService To MicroService
-  * [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) (예정)
+  * [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign)
 * Tracing
   * [Spring Cloud Sleuth (Zipkin)](https://spring.io/projects/spring-cloud-sleuth) (예정)
 * Transaction Management (예정)
