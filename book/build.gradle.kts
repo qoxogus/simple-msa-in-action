@@ -21,10 +21,15 @@ repositories {
 extra["springCloudVersion"] = "2023.0.1"
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-config")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+//	implementation("org.springframework.cloud:spring-cloud-starter-bus-kafka")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

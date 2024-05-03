@@ -5,7 +5,7 @@
 * Gateway
   * [Spring Cloud Gateway](https://cloud.spring.io/spring-cloud-gateway/reference/html/)
 * Config Server
-  * [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/) (추후 필요할 때 구축)
+  * [Spring Cloud Config](https://docs.spring.io/spring-cloud-config/docs/current/reference/html/)
 * MicroService To MicroService
   * [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign) (예정)
 * Tracing
@@ -27,6 +27,11 @@
       <img src="./image/eureka-screenshot.png" alt="eureka-screenshot">
     </div>
     </details>
+* Config Server (Port : `8888`)
+  * http://localhost:8888/{application}/{profile}
+  * 민감한 정보 처리하게 된다면 암호화 필요
+  * 파일시스템 활용하여 구축하였지만, git repository로 구축하는 방법도 있음
+  * 서버별로 `POST | /actuator/refresh`를 호출하는 방법도 있지만, cloud bus를 활용하는 방법도 있음 (여러 서버 config 값을 갱신 시킬 때 유용, kafka etc...) 
 * Gateway Server (Port : `8000`)
   * http://localhost:8000/api/v1/health-check
 * Member Server (Port : `8080`)

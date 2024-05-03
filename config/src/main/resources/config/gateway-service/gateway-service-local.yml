@@ -1,10 +1,10 @@
 server:
   port: 8000
 
-spring:
-  application:
-    name: gateway-service
+refresh-test:
+  word: hi
 
+spring:
   cloud:
     gateway:
       mvc:
@@ -17,7 +17,7 @@ spring:
           - id: book-service
             uri: lb://BOOK-SERVICE
             predicates:
-            - Path=/api/{version}/books/**
+              - Path=/api/{version}/books/**
 
 eureka:
   instance:
@@ -28,3 +28,13 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "refresh"
+  endpoint:
+    refresh:
+      enabled: true
