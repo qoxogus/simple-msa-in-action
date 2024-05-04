@@ -39,7 +39,10 @@
 * Config Server (Port : `8888`)
   * http://localhost:8888/{application}/{profile}
   * 민감한 정보 처리하게 된다면 암호화 필요
-  * 파일시스템 활용하여 구축하였지만, git repository로 구축하는 방법도 있음
+  * ~~파일시스템 활용하여 구축하였지만, git repository로 구축하는 방법도 있음~~
+    * https://github.com/qoxogus/simple-msa-config
+    * github repository 이용하여 구축 완료, 위 주소는 설정파일이 저장된 repository 주소
+    * private repository로 설정 시 접근 관련 설정 필요
   * 서버별로 `POST | /actuator/refresh`를 호출하는 방법도 있지만, cloud bus를 활용하는 방법도 있음 (여러 서버 config 값을 갱신 시킬 때 유용, kafka etc...) 
 * Gateway Server (Port : `8000`)
   * http://localhost:8000/api/v1/health-check

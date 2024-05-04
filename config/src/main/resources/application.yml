@@ -4,9 +4,11 @@ server:
 spring:
   application:
     name: config-service
-  profiles:
-    active:
-      - native
+
+    # file system
+#  profiles:
+#    active:
+#      - native
 
 #  kafka:
 #    bootstrap-servers: localhost:5000
@@ -14,8 +16,14 @@ spring:
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config/{application}
+        git:
+          uri: https://github.com/qoxogus/simple-msa-config
+          search-paths: '{application}'
+          default-label: master
+
+        # file system
+#        native:
+#          search-locations: classpath:/config/{application}
 
 eureka:
   instance:
