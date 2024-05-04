@@ -9,15 +9,16 @@
 * MicroService To MicroService
   * [Spring Cloud OpenFeign](https://spring.io/projects/spring-cloud-openfeign)
 * Tracing
-  * [Micrometer](https://micrometer.io/) (예정)
+  * [Micrometer, Zipkin](https://micrometer.io/)
   * Spring Boot 3.1까지만 [Spring Cloud Sleuth](https://spring.io/projects/spring-cloud-sleuth) 지원, [Micrometer](https://micrometer.io/)로 이전함
     * [관련자료](https://docs.spring.io/spring-cloud-sleuth/docs/current-SNAPSHOT/reference/html/)
-* Transaction Management (예정)
+* Composition
+  * API Composition
+  * CQRS (예정)
+* Transaction Management ?
   * Saga Pattern ?
     * Kafka ?
     * Axon ?
-* API Composition, CQRS (예정)
-  * ...
 
 
 ### Description
@@ -30,7 +31,7 @@
 * Eureka Server (Port : `8761`)
   * Spring Eureka Dashboard : http://localhost:8761
     <details>
-    <summary>example images</summary>
+    <summary>image</summary>
     <div markdown="1">
       <img src="./image/eureka-screenshot.png" alt="eureka-screenshot">
     </div>
@@ -52,3 +53,10 @@
   * for gateway : http://localhost:8000/api/v1/books/health-check
     * predicate : `/api/{version}/books/**`
     * forward : `8000` -> `9090`
+---
+  * [Docker] Zipkin Server (Port : `9411`)
+    * Brave + Zipkin 구성으로 적용 (+ OpenFeign Micrometer)
+    * `docker run -d -p 9411:9411 openzipkin/zipkin`
+    * http://localhost:9411/zipkin
+  
+    ![](./image/service-structure-screenshot.png)*service structure image*
