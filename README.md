@@ -53,7 +53,9 @@
   * for gateway : http://localhost:8000/api/v1/books/health-check
     * predicate : `/api/{version}/books/**`
     * forward : `8000` -> `9090`
+
 ---
+
   * [Docker] Zipkin Server (Port : `9411`)
     * Brave + Zipkin 구성으로 적용 (+ OpenFeign Micrometer)
     * `docker run -d -p 9411:9411 openzipkin/zipkin`
