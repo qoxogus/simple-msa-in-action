@@ -31,6 +31,10 @@ dependencies {
 //	implementation("org.springframework.cloud:spring-cloud-starter-bus-kafka")
 	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 
+	implementation("io.github.openfeign:feign-micrometer")
+	implementation("io.micrometer:micrometer-tracing-bridge-brave")
+	implementation("io.zipkin.reporter2:zipkin-reporter-brave")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
